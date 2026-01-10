@@ -275,7 +275,7 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   if (!cta) return;
 
   // 表示させるスクロール位置の目安（FVを過ぎたあたり）
-  const TRIGGER_Y = 300; 
+  const TRIGGER_Y = 500; 
 
   const handleScroll = () => {
     // 現在のスクロール位置を取得
