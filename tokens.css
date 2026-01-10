@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --color-main: #1d3557;
+  --color-accent: #e63946;
+  --color-sub: #457b9d;
+  --color-bg: #ffffff;
+  --color-surface: #f4f5f7;
+  --color-surface-dark: #e1e4e8;
+  --color-text: #111111;
+  --color-text-light: #ffffff;
+  --color-muted: #666666;
+
+  /* Typography */
+  --font-hero: clamp(2.5rem, 8vw, 5rem);
+  --font-xl: clamp(1.75rem, 4vw, 2.5rem);
+  --font-lg: clamp(1.125rem, 2vw, 1.5rem);
+  --font-base: clamp(15px, 1.5vw, 16px);
+  --font-sm: 13px;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-section: clamp(60px, 10vw, 100px);
+
+  /* UI Elements */
+  --radius: 4px;
+  --radius-lg: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --container: 1080px;
+  --container-narrow: 800px;
+
+  /* Z-Index */
+  --z-back: -1;
+  --z-base: 1;
+  --z-header: 100;
+  --z-modal: 1000;
+  --z-toast: 9999;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー｜木村建設</title>
+  
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="layout.css">
+
+  <style>
+    /* Privacyページ固有の微調整 */
+    .privacy-body {
+      background-color: var(--color-bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .privacy-main {
+      flex: 1;
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-xl);
+    }
+    .privacy-paper {
+      background: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--space-lg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--color-surface-dark);
+    }
+    .privacy-title {
+      font-size: var(--font-xl);
+      font-weight: 900;
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid var(--color-main);
+    }
+    .privacy-section {
+      margin-bottom: var(--space-md);
+    }
+    .privacy-h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      color: var(--color-main);
+    }
+    .privacy-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-sm);
+      color: var(--color-text);
+    }
+    .privacy-list {
+      list-style: disc;
+      padding-left: 1.5em;
+      margin-bottom: var(--space-sm);
+      font-size: 0.95rem;
+    }
+    .privacy-back-btn {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: var(--space-md);
+      color: var(--color-muted);
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .privacy-back-btn:hover {
+      color: var(--color-main);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="privacy-body">
+
+  <main class="container privacy-main">
+    
+    <a href="index.html" class="privacy-back-btn">← 採用ページに戻る</a>
+
+    <article class="privacy-paper">
+      <h1 class="privacy-title">プライバシーポリシー</h1>
+
+      <div class="privacy-content">
+        <section class="privacy-section">
+          <h3 class="privacy-h3">1. 個人情報の利用目的</h3>
+          <p class="privacy-text">
+            本フォームからご入力いただいた氏名・電話番号・メールアドレス・その他の情報は、以下の目的のみに利用します。
+          </p>
+          <ul class="privacy-list">
+            <li>採用選考および面接日程の調整</li>
+            <li>応募者への合否連絡</li>
+            <li>採用決定後の入社手続き</li>
+          </ul>
+        </section>
+
+        <section class="privacy-section">
+          <h3 class="privacy-h3">2. 個人情報の第三者提供・委託</h3>
+          <p class="privacy-text">
+            当事業所は、法令に基づく場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。<br>
+            ただし、採用活動の効率化（応募受付システムの利用やWebサイトのアクセス解析など）のために、信頼できる外部サービスを利用する場合があります。この場合も、個人情報は厳重に管理されます。
+          </p>
+        </section>
+
+        <section class="privacy-section">
+          <h3 class="privacy-h3">3. お問い合わせ窓口</h3>
+          <p class="privacy-text">
+            個人情報の開示・訂正・削除等のご希望がある場合は、下記までご連絡ください。
+          </p>
+          <div style="background: var(--color-surface); padding: 16px; border-radius: 4px;">
+            <p class="privacy-text" style="margin:0;">
+              <strong>木村建設</strong><br>
+              採用担当：木村　翼<br>
+              電話番号：{{PHONE_NUMBER}}
+            </p>
+          </div>
+        </section>
+
+        <section class="privacy-section">
+          <p class="privacy-text" style="font-size: 0.8rem; color: var(--color-muted); margin-top: 32px;">
+            制定日：2026年1月XX日<br>
+            ※本ポリシーの内容は、法令の改正等に応じて予告なく変更される場合があります。
+          </p>
+        </section>
+      </div>
+    </article>
+
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="index.html" class="btn btn--sub" style="max-width: 200px;">トップページへ戻る</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copyright">© Kimura Kensetsu. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+.apply-flow { background-color: #fff; }
+.apply-flow__container { max-width: 800px; margin: 0 auto; }
+.apply-flow__steps {
+  list-style: none; padding: 0; margin: 0; display: grid;
+  gap: var(--space-md); counter-reset: flow-counter;
+}
+.apply-flow__step {
+  position: relative; background: var(--color-surface);
+  padding: var(--space-md) var(--space-md) var(--space-md) 80px;
+  border-radius: var(--radius-lg); border: 1px solid var(--color-surface-dark);
+}
+.apply-flow__num {
+  position: absolute; top: 20px; left: 20px; font-size: 2.5rem; font-weight: 900;
+  color: var(--color-sub); opacity: 0.3; line-height: 1; font-family: monospace;
+}
+@media (max-width: 480px) {
+  .apply-flow__step { padding: 60px 20px 20px 20px; }
+  .apply-flow__num { top: 10px; left: 10px; font-size: 2rem; }
+}
+.apply-flow__step-title {
+  font-size: var(--font-lg); font-weight: 700; margin: 0 0 8px 0; color: var(--color-main); display: flex; align-items: center;
+}
+.apply-flow__step:not(:last-child)::after {
+  content: "▼"; position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%);
+  color: var(--color-sub); font-size: 14px; opacity: 0.5;
+}
+@media (min-width: 768px) { .apply-flow__step:not(:last-child)::after { display: none; } }
+.apply-flow__text { font-size: var(--font-base); color: var(--color-text); line-height: 1.6; margin: 0; }
+.apply-flow__note-card {
+  margin-top: var(--space-lg); background: #fdfdfd; border: 2px dashed var(--color-surface-dark);
+  padding: var(--space-md); border-radius: var(--radius);
+}
+.apply-flow__note-title { font-size: 1rem; font-weight: 700; margin: 0 0 12px 0; color: var(--color-text); }
+.apply-flow__note-list { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 1.8; color: var(--color-muted); }
+.apply-flow__note-list li { margin-bottom: 4px; }
