@@ -411,20 +411,107 @@ body {
 .btn-submit:hover .btn-submit__arrow { transform: translateX(4px); }
 @media (max-width: 480px) { .form { padding: var(--space-md); } }
 
-/* Floating CTA */
-.floating-cta { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000; pointer-events: none; padding-bottom: env(safe-area-inset-bottom); background: rgba(255, 255, 255, 0.9); border-top: 1px solid rgba(0,0,0,0.1); box-shadow: 0 -4px 10px rgba(0,0,0,0.05); transform: translateY(0); transition: transform 0.3s ease; }
-.floating-cta__inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-xs); padding: 10px var(--space-sm); pointer-events: auto; }
-.floating-cta__btn { display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: var(--radius); height: 56px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: opacity 0.2s; }
-.floating-cta__btn:active { opacity: 0.8; transform: scale(0.98); }
-.floating-cta__btn--tel { background: #fff; border: 2px solid var(--color-surface-dark); color: var(--color-text); flex-direction: column; gap: 2px; }
-.floating-cta__btn--tel .floating-cta__icon { font-size: 1.2rem; line-height: 1; }
-.floating-cta__btn--tel .floating-cta__text { font-size: 0.7rem; font-weight: bold; }
-.floating-cta__btn--primary { background: var(--color-accent); color: #fff; gap: 8px; }
-.floating-cta__btn--primary .floating-cta__icon { font-size: 1.4rem; }
-.floating-cta__text-group { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; }
-.floating-cta__sub { font-size: 0.6rem; opacity: 0.9; }
-.floating-cta__main { font-size: 1.1rem; font-weight: 900; letter-spacing: 0.05em; }
-@media (min-width: 768px) { .floating-cta { display: none; } }
+/* ===== Floating CTA (SP only) - Scroll Trigger Ver. ===== */
+.floating-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  pointer-events: none;
+  
+  padding-bottom: env(safe-area-inset-bottom);
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+  
+  /* ★修正点：初期状態は下に隠す */
+  transform: translateY(120%);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* 気持ちいい動きに調整 */
+}
+
+/* ★追加：JSでこのクラスがついたら表示 */
+.floating-cta.is-active {
+  transform: translateY(0);
+}
+
+.floating-cta__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-xs);
+  padding: 10px var(--space-sm);
+  pointer-events: auto;
+}
+
+/* ボタンのスタイルはそのまま */
+.floating-cta__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: var(--radius);
+  height: 56px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: opacity 0.2s;
+}
+
+.floating-cta__btn:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.floating-cta__btn--tel {
+  background: #fff;
+  border: 2px solid var(--color-surface-dark);
+  color: var(--color-text);
+  flex-direction: column;
+  gap: 2px;
+}
+
+.floating-cta__btn--tel .floating-cta__icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.floating-cta__btn--tel .floating-cta__text {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.floating-cta__btn--primary {
+  background: var(--color-accent);
+  color: #fff;
+  gap: 8px;
+}
+
+.floating-cta__btn--primary .floating-cta__icon {
+  font-size: 1.4rem;
+}
+
+.floating-cta__text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+}
+
+.floating-cta__sub {
+  font-size: 0.6rem;
+  opacity: 0.9;
+}
+
+.floating-cta__main {
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+/* PCでは非表示 */
+@media (min-width: 768px) {
+  .floating-cta {
+    display: none;
+  }
+}
 
 /* Footer */
 .footer { background: var(--color-main); color: #fff; padding: var(--space-xl) 0 var(--space-lg); margin-top: 0; text-align: center; }

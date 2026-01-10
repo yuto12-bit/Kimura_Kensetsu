@@ -264,3 +264,30 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
   targets.forEach(target => observer.observe(target));
 })();
+
+/* script.base.js の末尾に追加 */
+
+// ==============================
+// Floating CTA Visibility Control
+// ==============================
+(function () {
+  const cta = document.querySelector('.floating-cta');
+  if (!cta) return;
+
+  // 表示させるスクロール位置の目安（FVを過ぎたあたり）
+  const TRIGGER_Y = 300; 
+
+  const handleScroll = () => {
+    // 現在のスクロール位置を取得
+    const currentY = window.scrollY;
+
+    if (currentY > TRIGGER_Y) {
+      cta.classList.add('is-active');
+    } else {
+      cta.classList.remove('is-active');
+    }
+  };
+
+  // スクロールイベントを監視（passive: true で負荷軽減）
+  window.addEventListener('scroll', handleScroll, { passive: true });
+})();
