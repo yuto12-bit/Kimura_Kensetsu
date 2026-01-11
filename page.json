@@ -1,17 +1,17 @@
 {
-  "COMPANY_NAME": "Acme建設",
+  "COMPANY_NAME": "木村建設",
   "PHONE_NUMBER": "090-0000-0000",
-  "ADDRESS": "大阪府東大阪市（住所を入れる）",
-  "OWNER_NAME": "山田 太郎",
-  "LP_SOURCE_NAME": "demo_recruit_lp_acme",
-  "GA_MEASUREMENT_ID": "G-XXXXXXXXXX",
-  "GAS_EXEC_URL": "https://script.google.com/macros/s/XXXXXXXX/exec",
+  "ADDRESS": "兵庫県神戸市",
+  "OWNER_NAME": "木村　翼",
+  "LP_SOURCE_NAME": "Kimura_Kensetsu",
+  "GA_MEASUREMENT_ID": "G-05L04BRKQ8",
+  "GAS_EXEC_URL": "https://script.google.com/macros/s/AKfycbwBw09QVXgN6ssfOL5plpI_h9euw541YAbUurxU4hWzmsKvI7vUE0oVLA04cFX8efgh/exec",
   "THANKS_PAGE": "thanks.html",
   "variants": [
     "sim-income","job-spec","apply-flow"
   ],
-  "CONTACT_PERSON": "担当者名",
-  "CONTACT_EMAIL": "contact@example.com",
+  "CONTACT_PERSON": "木村　翼",
+  "CONTACT_EMAIL": "yuto1201h@gmail.com",
   "CONTACT_TEL": "090-0000-0000",
-  "ASSET_VERSION": "2025-12-23"
+  "ASSET_VERSION": "2026-01-11"
 }

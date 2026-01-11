@@ -115,9 +115,9 @@ const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   form.dataset.bound = "1";
 
   // ▼ GAS URL（プレースホルダー）
-  const scriptURL = "https://script.google.com/macros/s/XXXXXXXX/exec"; 
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwBw09QVXgN6ssfOL5plpI_h9euw541YAbUurxU4hWzmsKvI7vUE0oVLA04cFX8efgh/exec"; 
   const thanksPage = "thanks.html"; 
-  const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  const GA_MEASUREMENT_ID = "G-05L04BRKQ8";
 
   const TIMEOUT_MS = 15000;
   const submitBtn = form.querySelector('button[type="submit"]');
