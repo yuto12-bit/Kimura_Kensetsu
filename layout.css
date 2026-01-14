@@ -377,7 +377,7 @@ body {
 
 /* Contact */
 .contact-section { background-color: var(--color-surface); padding-bottom: var(--space-xl); }
-.contact__actions { display: grid; gap: var(--space-md); max-width: 600px; margin: 0 auto var(--space-lg); }
+.contact__actions { display: grid; gap: var(--space-md); max-width: 600px; margin: 0 auto var(--space-lg); padding-left: 20px; padding-right: 20px;}
 .contact-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border-radius: var(--radius-lg); text-decoration: none; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
 .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
 .contact-btn--tel { background: linear-gradient(135deg, var(--color-accent) 0%, #d62839 100%); }
