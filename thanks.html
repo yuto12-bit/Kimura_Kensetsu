@@ -121,18 +121,36 @@
     </div>
   </footer>
 
-  <script>
-    window.addEventListener('load', () => {
-      // gtagが存在する場合のみ実行（エラー回避）
-      if (typeof gtag === 'function') {
-        gtag('event', 'generate_lead', {
-          event_category: 'conversion',
-          event_label: 'form_submit',
-          page_path: location.pathname
-        });
-      }
-    });
-  </script>
+ <script>
+  (function () {
+    function fireSubmitSuccess() {
+      // gtagが無い/ブロックされてる環境は何もしない
+      if (typeof gtag !== "function") return;
+
+      // 二重発火ガード（リロード・戻る進む対策）
+      const key = "ga4_submit_success_fired:" + location.pathname;
+      if (sessionStorage.getItem(key) === "1") return;
+      sessionStorage.setItem(key, "1");
+
+      const pageId = document.body.getAttribute("data-page-id") || "";
+
+      gtag("event", "submit_success", {
+        event_category: "conversion",
+        event_label: "form_submit",
+        page_path: location.pathname,
+        page_id: pageId
+      });
+    }
+
+    if (document.readyState === "complete") {
+      fireSubmitSuccess();
+    } else {
+      window.addEventListener("load", fireSubmitSuccess, { once: true });
+    }
+  })();
+</script>
+
+
 
 </body>
 </html>
